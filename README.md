@@ -1,82 +1,56 @@
-<div align="center">
-  <img src="img/cover1.png" alt="UI Design Skills Framework Cover" width="400px">
-  
-  <h1>UI Design Skills Framework v2.0</h1>
-  
-  <p><strong>The High-Performance Constraint Engine for AI-Augmented Engineering</strong></p>
-</div>
+# testing-skill
 
-<br />
+Un ensemble de documents et d'exemples pour les bonnes pratiques de test (Vitest, Vue Test Utils, MSW, TDD).
 
-Developing modern interfaces is no longer just about writing CSS—it's about providing the right **constraints** to your AI agent (Cursor, Copilot, Windsurf). 
+Ce dépôt contient un "skill" de référence pour écrire, structurer et maintenir des tests front-end. Il est organisé pour aider les développeurs à trouver rapidement : stratégie, conventions d'écriture de tests, doubles de test, exemples pratiques et checklists.
 
-The **UI Design Skills Framework** is a production-grade documentation system designed to transform your AI assistant into a "Gold Standard" designer. It enforces strict design tokens, psychological UX laws, and advanced UI patterns while being mathematically optimized for **token efficiency**.
+## Structure
 
----
+Les fichiers principaux se trouvent dans le dossier `skills/` et sont organisés ainsi :
 
-## ⚡ AI-Ready Architecture: The "Token-Aware" Edge
+- `01-foundations/` — philosophie, stratégie, TDD
+- `02-core-concepts/` — anatomie d'un test, test doubles, anti-patterns
+- `03-implementation-vue/` — configuration Vitest, composants, MSW
+- `04-resources/` — checklists et aides rapides
 
-Unlike verbose documentation, this framework is engineered for the **Context Window** era:
+## Générer l'index
 
-- **Semantic Density (Prompt Compression):** Core principles and components are written in a hybrid pseudo-code format, reducing token consumption by **~45%** without losing directive precision.
-- **Tiered Agent Loading:** A 5-tier routing system (`SKILL.md`) ensures your agent only loads what it needs.
-- **Example Isolation (Lazy Loading):** Heavy example files are isolated behind "Negative Prompts" to prevent accidental token bloat during routine tasks.
-- **Absolute Constraints:** Hardcoded HSL mirroring and 4px grids eliminate "vibe coding" and AI hallucinations.
-
----
-
-## 🚀 Quickstart
-
-Initialize the framework in your agent's environment:
+Un script aide à construire un index JSON consommable par des agents ou outils :
 
 ```bash
-npx skills@latest add otmanesabiri/frontend-engineering
+# Générer skills/.index.json
+node ./bin/build-index.js
 ```
 
-Once installed, the agent will automatically reference the `.agents/` or `skills/` directory. For maximum performance in **Cursor**, add the path to `SKILL.md` in your `.cursorrules`.
+Le script lit les fichiers Markdown de `skills/` et produit `skills/.index.json`.
 
-### Tiered Loading Strategy
-| Tier | Scope | Files |
-| :--- | :--- | :--- |
-| **Tier 1** | **Mandatory** | `core-principles.md`, `tokens.md` |
-| **Tier 2** | **Reference** | `composants.md`, `lois-ux.md`, `mode-sombre.md` |
-| **Tier 3** | **Specialized** | `data-visualization.md`, `i18n-rtl.md`, `accessibility.md` |
-| **Tier 4** | **Extensions** | Navigation, Search, Performance, Mobile patterns |
-| **Tier 5** | **Lazy Load** | Examples (Isolated from default context) |
+## Pour les utilisateurs du skill
 
----
+Si vous consommez ce projet via `npx`, vous n'avez rien à générer manuellement. La commande d'installation est :
 
-## 🏆 Showcase: The Gold Standard
+```bash
+npx skills@latest add otmanesabiri/testing-skill
+```
 
-See the framework in action. These are not manual designs; they are results of AI agents following our strict constraints:
+L'index est déjà inclus dans le projet publié. La génération de `skills/.index.json` est réservée aux contributeurs qui modifient les fichiers dans `skills/`.
 
-*   **[SaaS Analytics Dashboard](skills/design-interface/examples/showcase-saas/index1.html)** — *Miller's Law chunking, 3D animations, and Doherty-compliant skeletons.*
-*   **[Premium E-commerce Landing](skills/design-interface/examples/showcase-saas/index.html)** — *Dark mode HSL mirroring and conversion-optimized hierarchy.*
+## Usage rapide
 
----
+- Lire `SKILL.md` pour le routing rapide et les règles non-négociables.
+- Modifier ou ajouter des fichiers Markdown dans `skills/` puis relancer `node ./bin/build-index.js`.
 
-## 🛠️ Advanced Extensions
+## Contribuer
 
-We've expanded the framework to cover complex real-world scenarios:
+1. Fork / clone le dépôt
+2. Ajouter ou modifier un fichier dans `skills/` en respectant la structure
+3. Regénérer l'index :
 
-*   **[Performance Design](skills/design-interface/extensions/performance-design.md)** — Skeletons, Optimistic UI, and perceived speed math.
-*   **[Navigation Patterns](skills/design-interface/extensions/navigation-patterns.md)** — Mobile-first sidebars, breadcrumbs, and command palettes.
-*   **[Search & Discovery](skills/design-interface/extensions/search-patterns.md)** — Faceted filtering and predictive search architecture.
-*   **[Mobile Patterns](skills/design-interface/extensions/mobile-patterns.md)** — Touch targets, gestures, and thumb-zone optimization.
+```bash
+node ./bin/build-index.js
+```
+
+4. Commit & push
 
 ---
 
-## 🧠 Core Philosophy
-
-1. **Grayscale First:** If the hierarchy fails in B&W, color won't fix it.
-2. **Spacing > Borders:** Use proximity to group elements. Avoid "box trapping".
-3. **Atomic Decisions:** One decision per view = One primary action.
-4. **Physical Accuracy:** 44x44px targets. No arbitrary pixels.
-5. **Ethical Rigor:** un-subscribing == subscribing. No dark patterns.
-
----
-
-<div align="center">
-  <p><em>Software engineering demands rigor. Interface design requires no less.</em></p>
-  <p>This framework condenses decades of design principles (Refactoring UI, Practical UI) into an automated, token-optimized engine for the next generation of developers.</p>
-</div>
+Si vous voulez que j'ajoute des scripts NPM, des checks GitHub Actions pour valider l'index, ou un modèle de frontmatter pour prioriser des fichiers, dites-le et je l'ajoute.
