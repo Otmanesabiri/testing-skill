@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "ui-design-interface": {
+      "source": "otmanesabiri/ui-design-skills",
+      "sourceType": "github",
+      "skillPath": "skills/design-interface/SKILL.md",
+      "computedHash": "6107c08c6b14f52b16c8efbba2dc2905d64c0f63b1b55308840cacde0470362c"
+    }
+  }
+}

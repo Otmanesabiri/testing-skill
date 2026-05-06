@@ -1,0 +1,184 @@
+{
+  "version": 2,
+  "generatedAt": "2026-05-06",
+  "maxFilesPerTask": 3,
+  "routingPrinciples": [
+    "Start with `01-foundations/philosophy.md` for strategy",
+    "Load at most 3 files per task",
+    "Prefer co-location: tests next to source when possible",
+    "Use cached facts from session memory before rereading source files"
+  ],
+  "coreRouting": {
+    "what_to_test": [
+      "01-foundations/philosophy.md"
+    ],
+    "how_to_structure": [
+      "01-foundations/tdd-lifecycle.md",
+      "02-core-concepts/anatomy.md"
+    ],
+    "mocking_and_doubles": [
+      "02-core-concepts/test-doubles.md"
+    ],
+    "vue_implementation": [
+      "03-implementation-vue/vitest-config.md",
+      "03-implementation-vue/components.md",
+      "03-implementation-vue/integration-msw.md"
+    ],
+    "checklists": [
+      "04-resources/checklists.md"
+    ],
+    "antipatterns": [
+      "02-core-concepts/antipatterns.md"
+    ]
+  },
+  "skills": [],
+  "playbooks": [],
+  "rules": [],
+  "contracts": [],
+  "diagnostics": [],
+  "knowledge": [
+    {
+      "id": "01-foundations/philosophy",
+      "file": "01-foundations/philosophy.md",
+      "category": "knowledge",
+      "title": "philosophy",
+      "keywords": [
+        "unit test",
+        "testing"
+      ],
+      "relatedFiles": [],
+      "loadTier": 1
+    },
+    {
+      "id": "01-foundations/tdd-lifecycle",
+      "file": "01-foundations/tdd-lifecycle.md",
+      "category": "knowledge",
+      "title": "tdd lifecycle",
+      "keywords": [
+        "tdd",
+        "unit test",
+        "testing"
+      ],
+      "relatedFiles": [],
+      "loadTier": 1
+    },
+    {
+      "id": "00-index",
+      "file": "00-index.md",
+      "category": "knowledge",
+      "title": "00 index",
+      "keywords": [
+        "vitest",
+        "vue",
+        "msw",
+        "tdd",
+        "testing",
+        "mock",
+        "stub",
+        "fake",
+        "checklist",
+        "coverage",
+        "flaky",
+        "antipatterns"
+      ],
+      "relatedFiles": [],
+      "loadTier": 2
+    },
+    {
+      "id": "02-core-concepts/anatomy",
+      "file": "02-core-concepts/anatomy.md",
+      "category": "knowledge",
+      "title": "anatomy",
+      "keywords": [
+        "vitest",
+        "unit test",
+        "testing"
+      ],
+      "relatedFiles": [],
+      "loadTier": 2
+    },
+    {
+      "id": "02-core-concepts/antipatterns",
+      "file": "02-core-concepts/antipatterns.md",
+      "category": "knowledge",
+      "title": "antipatterns",
+      "keywords": [
+        "unit test",
+        "testing",
+        "antipatterns"
+      ],
+      "relatedFiles": [],
+      "loadTier": 2
+    },
+    {
+      "id": "02-core-concepts/test-doubles",
+      "file": "02-core-concepts/test-doubles.md",
+      "category": "knowledge",
+      "title": "test doubles",
+      "keywords": [
+        "unit test",
+        "testing",
+        "mock",
+        "stub",
+        "spy",
+        "fake"
+      ],
+      "relatedFiles": [],
+      "loadTier": 2
+    },
+    {
+      "id": "03-implementation-vue/components",
+      "file": "03-implementation-vue/components.md",
+      "category": "knowledge",
+      "title": "components",
+      "keywords": [
+        "vitest",
+        "vue",
+        "stub"
+      ],
+      "relatedFiles": [],
+      "loadTier": 3
+    },
+    {
+      "id": "03-implementation-vue/integration-msw",
+      "file": "03-implementation-vue/integration-msw.md",
+      "category": "knowledge",
+      "title": "integration msw",
+      "keywords": [
+        "msw",
+        "mock"
+      ],
+      "relatedFiles": [],
+      "loadTier": 3
+    },
+    {
+      "id": "03-implementation-vue/vitest-config",
+      "file": "03-implementation-vue/vitest-config.md",
+      "category": "knowledge",
+      "title": "vitest config",
+      "keywords": [
+        "vitest",
+        "vue",
+        "msw",
+        "pinia",
+        "coverage"
+      ],
+      "relatedFiles": [],
+      "loadTier": 3
+    },
+    {
+      "id": "04-resources/checklists",
+      "file": "04-resources/checklists.md",
+      "category": "knowledge",
+      "title": "checklists",
+      "keywords": [
+        "testing",
+        "mock",
+        "stub",
+        "checklist"
+      ],
+      "relatedFiles": [],
+      "loadTier": 4
+    }
+  ]
+}
